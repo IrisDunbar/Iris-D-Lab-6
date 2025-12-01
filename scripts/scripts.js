@@ -10,8 +10,8 @@ You are encouraged to use the provided naming convention for ease of review.
 /* create variables to hold the values for modelName and duration */
 
 // INSERT YOUR CODE HERE
-const modelName = document.getElementById("model-text")
-const duration = document.getElementById("duration-text")
+const modelName = document.getElementById("model-text");
+const duration = document.getElementById("duration-text");
 
 /****************** helper function ******************/
 /* create a function called recalculate() which will
@@ -29,7 +29,7 @@ let totalCost = document.getElementById("calculated-cost");
 function recalculate() {
     durationAmount = Number(duration.textContent)
     modelName.textContent === "Model XYZ" ? totalCost.innerHTML = durationAmount * 100 : totalCost.innerHTML = durationAmount * 213
-};
+}
 
 /****************** model button logic ******************/
 
@@ -50,7 +50,7 @@ modelButton.addEventListener("click", changeModel);
 function changeModel() {
     modelName.textContent === "Model XYZ" ? modelName.innerHTML = "Model CPRG" : modelName.innerHTML = "Model XYZ"
     recalculate();
-};
+}
 
 /****************** duration button logic ******************/
 /*  - first, create a variable to represent the "Change Duration" pseudo-button.
@@ -71,5 +71,5 @@ durationButton.addEventListener("click", changeDuration);
 function changeDuration() {
     duration.innerHTML = prompt("Please enter your desired duration") 
     /* I know you suggested not to use prompt, but it seems like the simplest and most straightforward way to do this */
-    recalculate()
-};
+    recalculate();
+}
